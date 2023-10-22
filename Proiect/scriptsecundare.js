@@ -1,0 +1,1 @@
+window.alert("Bine ați venit în Egipt!");

@@ -1,0 +1,187 @@
+
+
+
+body {
+    
+ background: url('https://wallup.net/wp-content/uploads/2019/10/309723-flowers-beauty-nature-sunset-macro-bokeh.jpg') no-repeat center center fixed; /* Schimbați calea către imagine */
+    background-size: cover;
+    color: #352626;
+    font-family: 'Manjari', sans-serif;
+}
+
+/* HEADER */
+
+.title h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.9em;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    text-align: center; /* antet stil */
+   
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* container */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.container>.header, .container>.content, .container>.sidebar, .container>.footer, .container>div {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+
+.container>.header, .container>.footer {
+    grid-column: 1/-1;
+    background-color: #1e272e;
+    color: #ffffff;
+}
+
+.container>.content {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+.rotate-image:hover img {
+    transform: rotate(360deg); /* rotire */
+    transition: transform 0.5s; /
+}
+.content>.article {
+    background: #304558;
+    padding: 20px;
+    margin-top: 5px;
+    color: #dfe6e9
+}
+
+.content .article h1,
+.content .article p {
+    padding: 10px;
+}
+
+.container>.sidebar {
+    grid-column: span 2;
+    grid-row: span 4;
+    background: #485460;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .sidebar img {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.container>.related-post {
+    background: #2d3436;
+    color: #ffffff;
+    height: 180px;
+    ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.container>.related-post:hover {
+    cursor: pointer;
+    border: 2px solid #54312a; 
+    background-color: #411e17; /* culoare de fundal la hover */
+    color: #fff; /*  culoare text la hover */
+    transition: all 0.3s; 
+}
+.container>.related-post img {
+    width: 80px; 
+    height: 80px; 
+    display: block;
+    margin: 0 auto;
+    box-sizing: content-box; 
+    border: 2px solid transparent; 
+}
+.container>.related-post p {
+    text-align: center;
+    margin: 0;
+}
+.Egipt img, .Elvetia img, .Japonia img, .Italia img, .Franta img {
+    width: 200px;
+    height: 150px;
+}
+.Egipt:hover,
+.Elvetia:hover,
+.Japonia:hover,
+.Italia:hover {
+    /*stil pentru hover la casutele de jos*/
+    border: 10px solid #8da565; 
+    background-color: #683124; 
+    color: #301f1f; 
+    transition: all 0.6s; 
+}
+
+.clock {
+    text-align: right;
+    font-size: 1.5em; /* dim txt  */
+    padding-right: 20px; /*  marginea  dreapta */
+    color: #c4cca3; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-bar {
+    text-align: right;
+    margin-top: 10px;
+}
+
+#search-input {
+    padding: 5px;
+    font-size: 14px;
+}
+
+#search-button {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.social-icons a {
+    margin-right: 10px; 
+}
+
+.social-icons img {
+    width: 30px; /* dimensiuni iconite  */
+    height: 30px;
+    border: none; /* fara contur */
+}
+@media screen and (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+    .container .content {
+        grid-column: 1 / -1;
+    }
+    .container .sidebar {
+        grid-column: 1 / 6;
+    }
+
+    .container .related-post {
+        grid-column: 1/-1;
+    }
+}
